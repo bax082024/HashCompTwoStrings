@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "HashingTwoStringsCompare": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
