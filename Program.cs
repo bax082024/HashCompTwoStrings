@@ -24,39 +24,40 @@ namespace HashingDemo
             Console.WriteLine($"Hash 2: {hash2}");
 
             // Comapre hashes
-            if (  hash1 == hash2 )
+            if (hash1 == hash2)
             {
                 Console.WriteLine("The hashes are identical. The strings are the same.");
             }
-            else 
-{
+            else
             {
-                 Console.WriteLine("The hashes are different. The strings are not the same.");
-            }
-
-
-        }
-
-        static string ComputeSHA256Hash(string input)
-        {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                // Convert input to bytes
-                byte[] inputBytes = Encoding.UTF8.GetBytes(input);
-
-                // Compute Hash
-                byte[] hashBytes = sha256.ComputeHash(inputBytes);
-
-                // Convert hash bytes to hexadecimal string
-                StringBuilder sb = new StringBuilder();
-                foreach (byte b in hashBytes)
                 {
-                    sb.Append(b.ToString("X2"));
+                    Console.WriteLine("The hashes are different. The strings are not the same.");
                 }
-                return sb.ToString();
+
+
             }
 
-        }
-    }
+            static string ComputeSHA256Hash(string input)
+            {
+                using (SHA256 sha256 = SHA256.Create())
+                {
+                    // Convert input to bytes
+                    byte[] inputBytes = Encoding.UTF8.GetBytes(input);
 
+                    // Compute Hash
+                    byte[] hashBytes = sha256.ComputeHash(inputBytes);
+
+                    // Convert hash bytes to hexadecimal string
+                    StringBuilder sb = new StringBuilder();
+                    foreach (byte b in hashBytes)
+                    {
+                        sb.Append(b.ToString("X2"));
+                    }
+                    return sb.ToString();
+                }
+
+            }
+        }
+
+    }
 }
