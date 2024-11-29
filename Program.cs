@@ -13,11 +13,21 @@ namespace HashingDemo
             // First string to compute
             Console.Write("Enter first string to hash: ");
             string? input1 = Console.ReadLine();
+            if (string.IsNullOrEmpty(input1))
+            {
+                Console.WriteLine("Invalid input! please enter a valid string");
+                return;
+            }
             string hash1 = ComputeSHA256Hash(input1);
 
             // Second string to compute
             Console.WriteLine("Enter second string to compute");
             string? input2 = Console.ReadLine();
+            if (string.IsNullOrEmpty(input2))
+            {
+                Console.WriteLine("Invalid input! please enter a valid string!");
+                return;
+            }
             string hash2 = ComputeSHA256Hash(input2);
 
             Console.WriteLine($"\nHash 1: {hash1}");
