@@ -23,6 +23,17 @@ namespace HashingDemo
             Console.WriteLine($"\nHash 1: {hash1}");
             Console.WriteLine($"Hash 2: {hash2}");
 
+            // Comapre hashes
+            if (  hash1 == hash2 )
+            {
+                Console.WriteLine("The hashes are identical. The strings are the same.");
+            }
+            else 
+{
+            {
+                 Console.WriteLine("The hashes are different. The strings are not the same.");
+            }
+
 
         }
 
