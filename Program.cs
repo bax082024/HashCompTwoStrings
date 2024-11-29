@@ -20,6 +20,9 @@ namespace HashingDemo
             string input2 = Console.ReadLine();
             string hash2 = ComputeSHA256Hash(input2);
 
+            Console.WriteLine($"\nHash 1: {hash1}");
+            Console.WriteLine($"Hash 2: {hash2}");
+
 
         }
 
